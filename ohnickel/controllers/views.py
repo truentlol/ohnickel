@@ -70,7 +70,7 @@ def index(request):
     context = {
         'index': 'lol',
         'msg': '',
-        'sesh': request.user.email,
+        #'sesh': request.user.email,
         'user': user
     }
     return render(request, 'index.html', context)
