@@ -13,8 +13,6 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
-import djcelery
-djcelery.setup_loader()
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -60,11 +58,11 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ohnickel',
-    'south',
+    #'south',
     #'rest_framework',
     'social_auth',
-    'djcelery',                 # Add Django Celery
-    'kombu.transport.django',
+    #'djcelery',                 # Add Django Celery
+    #'kombu.transport.django',
     #'django_bitcoin',
 )
 
