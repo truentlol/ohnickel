@@ -1,0 +1,172 @@
+{% include "_header.html" %}
+{% load staticfiles %}
+
+
+<script src="{% static 'js/index.js' %}"></script>
+
+<body>
+
+
+ <div id="wrapper">
+    Index html
+
+    {{sesh}}
+
+
+    {{ user.username}}
+
+
+
+    {% if user.is_admin %}
+
+        <div>create new forum</div>
+
+        <form id="forum_form">
+            {% csrf_token %}
+
+            <input id="forum_name_input" name="forum_name" placeholder="Name">
+            <input id="forum_description_input" name="forum_description" placeholder="Description">
+            <input id="forum_sticky" type="checkbox" name="forum_sticky" value="sticky">Sticky<br>
+
+
+
+            <button type="submit">Create</button>
+        </form>
+    {% endif %}
+
+
+{# #}
+{# <div class="forum row" data-forum_id='{{id}}'>#}
+{#    <div class="row_section forum_name_section name_section">#}
+{#        <div class='forum_icon'></div>#}
+{#        <div class="forum_name"><a href="/forum/{{id}}">{{name}}</a></div>#}
+{#        <div class="forum_description">{{description}}</div>#}
+{#    </div>#}
+{##}
+{##}
+{#    <div class="row_section forum_last_post_section">#}
+{#        <div class="forum_threads row_section_text">5</div>#}
+{#    </div>#}
+{##}
+{#    <div class="row_section forum_threads_row_section">#}
+{#        <div class="forum_threads row_section_text">5</div>#}
+{#    </div>#}
+{##}
+{#    <div class="row_section forum_posts_row_section">#}
+{#        <div class="forum_threads row_section_text">5</div>#}
+{#    </div>#}
+{##}
+{##}
+{#</div>#}
+
+
+        {# Prevents django from rendering data in the {{}} inside of the block #}
+        {% verbatim %}
+
+        <script id="forum_template" type="text/x-handlebars-template">
+
+            <tr class="forum row" data-forum_id='{{id}}'>
+                <td class="row_section forum_name_section name_section">
+                    <div class='forum_icon'></div>
+                    <div class="forum_name"><a href="/forum/{{id}}">{{name}}</a></div>
+                    <div class="forum_description">asdasd</div>
+                </td>
+
+
+                <td class="row_section forum_last_post_section">
+                    <div class="forum_threads row_section_text">5</div>
+                </td>
+
+                <td class="row_section forum_threads_row_section">
+                    <div class="forum_threads row_section_text">5</div>
+                </td>
+
+                <td class="row_section forum_posts_row_section">
+                    <div class="forum_threads row_section_text">5</div>
+                </td>
+
+
+            </tr>
+        </script>
+
+        {% endverbatim %}
+
+
+
+        <table style="width:100%">
+
+
+
+          <tr id="forums_header" class="table_header">
+            <td id="forums_header_text" class="table_header_text">Forums</td>
+          </tr>
+
+
+            <tr id="forum_columns_header" class="table_columns_header">
+                <td class="table_column_header" id="forum_column_header_forum">
+                   <div class="table_column_header_text">Forum</div>
+                </td>
+
+
+
+                <td class="table_column_header" id="forum_column_header_last_post">
+                   <div class="table_column_header_text">Last Post</div>
+                </td>
+
+
+                <td class="table_column_header" id="forum_column_header_threads">
+                   <div class="table_column_header_text">Threads</div>
+                </td>
+
+                <td class="table_column_header" id="forum_column_header_posts">
+                   <div class="table_column_header_text">Posts</div>
+                </td>
+
+            </tr>
+
+
+
+        <tr id="forums"></tr>
+
+
+
+        </table>
+
+
+{#        <div class="table">#}
+{#            <div id="forums_header" class="table_header">#}
+{#                <div id="forums_header_text" class="table_header_text">Forums</div>#}
+{#            </div>#}
+{##}
+{#            <div id="forum_columns_header" class="table_columns_header">#}
+{#                <div class="table_column_header" id="forum_column_header_forum">#}
+{#                   <div class="table_column_header_text">Forum</div>#}
+{#                </div>#}
+{##}
+{##}
+{##}
+{#                <div class="table_column_header" id="forum_column_header_last_post">#}
+{#                   <div class="table_column_header_text">Last Post</div>#}
+{#                </div>#}
+{##}
+{##}
+{#                <div class="table_column_header" id="forum_column_header_threads">#}
+{#                   <div class="table_column_header_text">Threads</div>#}
+{#                </div>#}
+{##}
+{#                <div class="table_column_header" id="forum_column_header_posts">#}
+{#                   <div class="table_column_header_text">Posts</div>#}
+{#                </div>#}
+{##}
+{#            </div>#}
+{##}
+{#            <div id="forums"></div>#}
+{#        </div>#}
+
+
+
+ </div>
+
+
+</body>
+</html>

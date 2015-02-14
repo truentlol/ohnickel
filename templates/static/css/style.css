@@ -1,0 +1,292 @@
+/* CSS RESET */
+/* http://meyerweb.com/eric/tools/css/reset/*/
+   /*v2.0 | 20110126*/
+   /*License: none (public domain)*/
+/**/
+
+/*html, body, div, span, applet, object, iframe,*/
+/*h1, h2, h3, h4, h5, h6, p, blockquote, pre,*/
+/*a, abbr, acronym, address, big, cite, code,*/
+/*del, dfn, em, img, ins, kbd, q, s, samp,*/
+/*small, strike, strong, sub, sup, tt, var,*/
+/*b, u, i, center,*/
+/*dl, dt, dd, ol, ul, li,*/
+/*fieldset, form, label, legend,*/
+/*table, caption, tbody, tfoot, thead, tr, th, td,*/
+/*article, aside, canvas, details, embed,*/
+/*figure, figcaption, footer, header, hgroup,*/
+/*menu, nav, output, ruby, section, summary,*/
+/*time, mark, audio, video {*/
+	/*margin: 0;*/
+	/*padding: 0;*/
+	/*border: 0;*/
+	/*font-size: 100%;*/
+	/*font: inherit;*/
+	/*vertical-align: baseline;*/
+/*}*/
+/* HTML5 display-role reset for older browsers */
+/*article, aside, details, figcaption, figure,*/
+/*footer, header, hgroup, menu, nav, section {*/
+	/*display: block;*/
+/*}*/
+/*body {*/
+	/*line-height: 1;*/
+/*}*/
+/*ol, ul {*/
+	/*list-style: none;*/
+/*}*/
+/*blockquote, q {*/
+	/*quotes: none;*/
+/*}*/
+/*blockquote:before, blockquote:after,*/
+/*q:before, q:after {*/
+	/*content: '';*/
+	/*content: none;*/
+/*}*/
+/*table {*/
+	/*border-collapse: collapse;*/
+	/*border-spacing: 0;*/
+/*}*/
+
+
+
+
+
+
+
+
+/* General */
+html{
+    height: 100vh;
+    max-width: 100%;
+    overflow: hidden;
+}
+body {
+    height: 100vh;
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color:#333333;
+    font:0.75em "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size:medium;
+    color:#000000;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+body{
+    background-color:#828282;
+
+}
+
+h1{
+    margin:0px;
+    padding:0px;
+}
+
+
+p{
+    margin: 0px;
+    padding: 0px;
+}
+h2{
+    margin:0px;
+    padding:0px;
+}
+h3{
+    margin:0px;
+    padding:0px;
+}
+
+#menu{
+    display: block;
+    float:left;
+    padding:0px;
+    margin:0px;
+    padding-top:8px;
+    /*position: relative;*/
+    /*top: 50%;*/
+    /*transform: translateY(50%);*/
+}
+
+#page_head{
+
+    width:100%;
+    float:left;
+    padding: 6px 0.5%;
+    background: linear-gradient(to bottom, #222 0%,#333 100%);
+
+}
+#head_wrap{
+    display:inline-block;
+    width: 80%;
+    height: 50px;
+    color:#63D13E;
+}
+
+
+#login_button{
+
+}
+
+#logout_button{
+
+}
+
+
+
+
+
+
+
+#wrapper {
+    margin: 0px auto;
+    width: 80%;
+}
+
+
+.table {
+    width: 70%;
+}
+
+.table_header {
+    height: 50px;
+    width: 100%;
+    background-color: #0066a2;
+    border: 1px solid;
+    border-color: #fff #ddd #ddd #fff;
+}
+
+
+.table_columns_header {
+    height: 25px;
+    width: 100%;
+    background-color: grey;
+    border: 1px solid;
+    border-color: #fff #ddd #ddd #fff;
+    border-top: none;
+
+}
+
+.table_header_text {
+    padding-top: 14px;
+    padding-left: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+
+.table_column_header {
+    padding: 0px;
+    margin: 0px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.table_column_header_text {
+    font-size: 12px;
+    padding-top: 5px;
+    padding-left: 5px;
+    text-align: center;
+}
+
+
+/*
+    Styling for forum column headers
+*/
+#forum_column_header_forum {
+    /*width: 65%;*/
+}
+
+
+
+
+
+#forum_column_header_last_post {
+    width: 100px;
+    float: right;
+}
+
+#forum_column_header_posts {
+    width: 100px;
+    float: right;
+}
+
+
+#forum_column_header_threads {
+    width: 100px;
+    float: right;
+}
+
+
+#forums {
+
+}
+
+.forum {
+
+}
+
+/* Styling for forum rows */
+
+
+.row {
+    width: 100%;
+    background: #f5f5f5;
+    border: 1px solid;
+    border-color: #fff #ddd #ddd #fff;
+    display: inline-block;
+}
+
+.name_section {
+
+}
+
+
+
+
+
+
+.forum_name_section {
+    float: left;
+    /*width: 40%;*/
+
+}
+
+
+.forum_last_post_section {
+    height: 100%;
+    width: 100px;
+    float: right;
+}
+
+.forum_threads_row_section {
+    height: 100%;
+    width: 100px;
+    float: right;
+}
+
+.forum_posts_row_section {
+    height: 100%;
+    width: 100px;
+    float: right;
+}
+
+.row_section_text {
+    padding-top: 10px;
+    text-align: center;
+}
+
+
+
+#forum_column_header_posts {
+    width: 100px;
+    float: right;
+}
+
+
+#forum_column_header_threads {
+    width: 100px;
+    float: right;
+}
+

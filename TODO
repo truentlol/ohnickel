@@ -1,0 +1,3 @@
+1. Ensure user can put two of the same item
+2. Disable the website, possibly check at the start of a request
+if the bot 'working==False'. If so redirect to error screen

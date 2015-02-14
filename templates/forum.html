@@ -1,0 +1,142 @@
+{% include "_header.html" %}
+{% load staticfiles %}
+
+
+
+
+<script>
+    var globals = {};
+    globals.forum_id = "{{forum_id}}";
+</script>
+
+<script src="{% static 'js/forum.js' %}"></script>
+
+<body>
+
+
+ <div id="wrapper">
+    Index html
+
+    {{sesh}}
+
+
+    {{ user.username}}
+
+
+
+    {% if user.is_admin %}
+
+        <div>create new forum</div>
+
+        <form id="forum_form">
+            {% csrf_token %}
+
+            <input id="forum_name_input" name="forum_name" placeholder="Name">
+            <input id="forum_description_input" name="forum_description" placeholder="Description">
+            <input id="forum_sticky" type="checkbox" name="forum_sticky" value="sticky">Sticky<br>
+
+
+
+            <button type="submit">Create</button>
+        </form>
+    {% endif %}
+
+
+
+
+        {# Prevents django from rendering data in the {{}} inside of the block #}
+        {% verbatim %}
+
+        <script id="thread_template" type="text/x-handlebars-template">
+            <div class="thread row" data-thread_id='{{id}}'>
+                <div class="row_section thread_name_section name_section">
+                    <div class="thread_name"><a href="/thread/{{id}}">{{name}}</a></div>
+                </div>
+
+
+                <div class="row_section thread_last_post_section">
+                    <div class="thread_threads row_section_text">5</div>
+                </div>
+
+                <div class="row_section thread_threads_row_section">
+                    <div class="thread_threads row_section_text">5</div>
+                </div>
+
+                <div class="row_section thread_posts_row_section">
+                    <div class="thread_threads row_section_text">5</div>
+                </div>
+
+
+            </div>
+        </script>
+
+        {% endverbatim %}
+
+        <div class="table">
+            <div id="create_thread_header" class="table_header">
+                <div id="forums_header_text" class="table_header_text">Post new thread</div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="row_section">
+                    <form id="thread_form">
+                        {% csrf_token %}
+
+                        <input id="thread_name_input" name="thread_name" placeholder="Thread name">
+
+
+
+                        <button type="submit">Create</button>
+                    </form>
+
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+
+        <div class="table">
+            <div id="forums_header" class="table_header">
+                <div id="forums_header_text" class="table_header_text">{{forum.name}}</div>
+            </div>
+
+            <div id="forum_columns_header" class="table_columns_header">
+                <div class="table_column_header" id="forum_column_header_forum">
+                   <div class="table_column_header_text">Thread</div>
+                </div>
+
+
+
+                <div class="table_column_header" id="forum_column_header_last_post">
+                   <div class="table_column_header_text">Last Post</div>
+                </div>
+
+
+                <div class="table_column_header" id="forum_column_header_threads">
+                   <div class="table_column_header_text">Threads</div>
+                </div>
+
+                <div class="table_column_header" id="forum_column_header_posts">
+                   <div class="table_column_header_text">Posts</div>
+                </div>
+
+            </div>
+
+            <div id="threads"></div>
+        </div>
+
+
+
+ </div>
+
+
+</body>
+</html>
